@@ -255,7 +255,6 @@ def run_experiments():
     for epoch in range(41):
         optimizer.zero_grad()
         output = model_seq2seq(src_data, target_data)
-        # Use .reshape instead of .view to avoid the error you saw
         loss = F.cross_entropy(output.reshape(-1, vocab_size), target_data.reshape(-1))
         loss.backward(); optimizer.step()
         losses_seq2seq.append(loss.item())
