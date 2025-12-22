@@ -1,4 +1,8 @@
 __pycache__/
 *.pyc
 messages.csv
-combined
+combined.txt
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
